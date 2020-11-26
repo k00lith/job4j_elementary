@@ -7,8 +7,8 @@ public class Converter {
         return rslEuro;
     }
 
-    public static double rubleToDollar(double value) {
-        double rslBaks = value / 60;
+    public static int rubleToDollar(int value) {
+        int rslBaks = value / 60;
         return rslBaks;
     }
 
@@ -20,7 +20,7 @@ public class Converter {
         System.out.println("140 rubles are " + euro + " euro. Test:" + passedeuro);
 
         //double baks = Converter.rubleToDollar(140);
-        double baks = Converter.rubleToDollar(140);
+        int baks = Converter.rubleToDollar(140);
         int expectedbaks = 2;
         boolean passedbaks = expectedbaks == baks;
         System.out.println("140 rubles are " + baks + " dollars. Test:" + passedbaks);
