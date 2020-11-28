@@ -21,6 +21,6 @@ public class ChessBoardTest {
     @Test
     public void wayIs0() {
         int way = ChessBoard.way(6, 1, 3, 4);
-        assertThat(way, is(0));
+        assertThat(way, is(3));
     }
 }
