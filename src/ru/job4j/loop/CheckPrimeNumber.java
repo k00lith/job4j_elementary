@@ -5,10 +5,11 @@ public class CheckPrimeNumber {
         //boolean prime = true;
         boolean prime = number != 1 ? true : false;
         for (int index = 2; index <= number - 1; index++) {
-            if (number % 2 == 0) {
+            if (number % index == 0) {
                 prime = false;
+                break;
             }
-            break;
+
         }
         return prime;
     }
