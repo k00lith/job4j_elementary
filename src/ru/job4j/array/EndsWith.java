@@ -8,9 +8,8 @@ public class EndsWith {
             if (word[i] != post[postIndex]) {
                 result = false;
                 break;
-            } else {
-                postIndex++;
             }
+            postIndex++;
         }
         /* проверить. что массив word имеет последние элементы одинаковые с post */
         return result;
