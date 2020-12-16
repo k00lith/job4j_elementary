@@ -4,12 +4,16 @@ public class Engineer extends Profession {
 
     private String department;
 
+    public Engineer(String name, String surname, String education, String birthday, String department) {
+        super(name, surname, education, birthday);
+        this.department = department;
+    }
+
     public String getDepartment() {
         return this.department;
     }
 
     public Endofsupport status(Project project) {
         return null;
-
     }
 }
