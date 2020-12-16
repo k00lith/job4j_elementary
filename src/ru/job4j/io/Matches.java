@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Matches {
 
-    public static int move(String player) {
+    public static int move(String player, int count) {
         Scanner inputPlayer = new Scanner(System.in);
         System.out.println(player + ", возьмите спички от 1 до 3 шт");
         int selectPlayer = Integer.valueOf(inputPlayer.nextLine());
@@ -12,28 +12,24 @@ public class Matches {
             System.out.println("Ошибка ввода, необходимо ввести число от 1 до 3 включительно. Переход хода");
             return 0;
         } else {
-            return selectPlayer;
+            count = count - selectPlayer;
+            System.out.println("Остаток: " + count);
+            return count;
         }
     }
 
     public static void main(String[] args) {
-        boolean run = true;
-        int matches = 11;
-        while (run) {
-            matches = matches - move("Player1");
-            System.out.println("Остаток " + matches);
-            if (matches <= 0) {
-                System.out.println("Player1 win!");
-                run = false;
+        int rsl = 11;
+        String winner = "Player1 win";
+        while (rsl > 0) {
+            rsl = move("Player1", rsl);
+            winner = "Player1 win";
+            if (rsl == 0) {
                 break;
             }
-            matches = matches - move("Player2");
-            System.out.println("Остаток " + matches);
-            if (matches <= 0) {
-                System.out.println("Player2 win!");
-                run = false;
-                break;
-            }
+            rsl = move("Player2", rsl);
+            winner = "Player2 win";
         }
+        System.out.println(winner);
     }
 }

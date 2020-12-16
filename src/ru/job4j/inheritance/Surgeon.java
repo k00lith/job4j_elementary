@@ -9,7 +9,6 @@ public class Surgeon extends Doctor {
         this.variety = getVariety();
     }
 
-
     public String getVariety() {
         return this.variety;
     }
