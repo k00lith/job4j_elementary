@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class ElementNotFoundException extends Exception {
     public static int indexOf(String[] value, String key) throws UserInputException {
         int rsl = -1;
-        for (String val: value) {
-            if (val.equals(key)) {
-                rsl = Arrays.asList(value).indexOf(key);
+        for (int i = 0; i < value.length; i++) {
+            if (value[i].equals(key)) {
+                rsl = i;
                 break;
             }
         }
