@@ -13,9 +13,8 @@ public class ElementNotFoundException extends Exception {
         }
         if (rsl == -1) {
             throw new UserInputException("No index found");
-        } else {
-            return rsl;
         }
+        return rsl;
     }
 
     public static void main(String[] args) {
